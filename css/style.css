@@ -133,10 +133,21 @@ body{
 	
 	
 #authenticator{
-	height:192px;
-	width:384px;
+	margin:40px 0;
 }
 
+	#authenticator.authorized{
+		display:none;
+	}
+
+	#twitter_button{
+		display:block;
+		height:24px;
+		width:154px;
+		background:transparent url(../assets/twitter_button.png) no-repeat top left scroll;
+		margin:0 auto;
+	}
+	
 #counter{
 	height:96px;
 	width:100%:
@@ -145,6 +156,11 @@ body{
 #petition{
 	width:100%;
 }
+
+	#petition ul{
+		list-style:none;
+	}
+
 
 
 

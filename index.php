@@ -6,7 +6,8 @@
 
 if($authenticated == true){
 	$username = $resp->screen_name;
-	print_r($resp);
+	$authorized = 'authorized';
+	//print_r($resp);
 }
 
 ?>
@@ -46,22 +47,23 @@ if($authenticated == true){
 		</section>
 		
 		
-		<section id="authenticator">
-			 <li><a href="auth.php?authorize=1&amp;force=1">Authorize Application (with callback) (force login)</a></li>
- 			 <li><a href="auth.php?wipe=1">Start Over and delete stored tokens</a></li>
+		<section id="authenticator" class="<?php echo $authorized; ?>">
+			 <a id="twitter_button" href="auth.php?authorize=1&amp;force=1"><!-- Authorize Application (with callback) (force login) --></a>
 		</section>
 		
 		<section id="counter">
-		
+			<?php getSignerCount(); ?> super smart people have signed this petition.
 		</section>
 		
 		<section id="petition">
-		
+			<ul>
+				<?php getSigners(); ?>
+			</ul>
 		</section>
 		
 		<footer>
 		</footer>
-		
+		<a href="auth.php?wipe=1">Start Over and delete stored tokens</a>
 		
 	
 	</div><!-- //end #mainframe -->
@@ -75,5 +77,6 @@ if($authenticated == true){
 	<script src="js/libs/dd_belatedpng.js"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg');</script>
 	<![endif]-->
+	
 </body>
 </html>

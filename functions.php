@@ -16,7 +16,7 @@ $row = mysql_fetch_array( $result );
 
 
 
-require('views.php');
+require_once('views.php');
 
 
 function createSigner($resp){
@@ -53,8 +53,6 @@ if((mysql_num_rows($result)) > 0){
 	}
 	
 }
-
-
 //Set flag for JS effect
 
 }
@@ -63,6 +61,18 @@ function updateSigner($resp){
  echo 'updateSigner fired';
 }
 
+function getSignerCount(){
+	$signerCount = mysql_num_rows(mysql_query("SELECT * FROM signers"));
+	echo $signerCount;
+}
+
+function getSigners(){
+	$signers = mysql_query("SELECT * FROM signers");
+	
+	while($signer = mysql_fetch_object($signers)){
+		buildSigner($signer);
+	}
+}
 
 function parseRSS($xml){
 	$count = count($xml->channel->item);

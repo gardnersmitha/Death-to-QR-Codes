@@ -42,7 +42,8 @@ if((mysql_num_rows($result)) > 0){
 			'$resp->description',
 			'$resp->followers_count',
 			'$resp->url',
-			'$resp->location'
+			'$resp->location',
+			''
 		)"
 	);
 	

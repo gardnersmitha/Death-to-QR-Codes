@@ -35,7 +35,7 @@ $tmhOAuth = new tmhOAuth(array(
 ));
 
 //$here = tmhUtilities::php_self();
-$here = 'http://localhost:8888/deathtoqrcodes/index.php';
+$here = 'http://localhost:8888/death2qr/index.php';
 session_start();
 
 function outputError($tmhOAuth) {

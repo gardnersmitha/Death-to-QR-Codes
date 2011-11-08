@@ -49,7 +49,8 @@ if((mysql_num_rows($result)) > 0){
 	) or print(mysql_error());
 	
 	if($result){
-		echo 'Successful query';
+		//echo 'Successful query';
+		sendTweet($resp);
 	}else{
 		echo 'No success';
 	}
@@ -59,12 +60,19 @@ if((mysql_num_rows($result)) > 0){
 
 }
 
+
+function sendTweet($resp){
+	require_once('tweet.php');
+	//$signerNumber = getSignerCount();
+	tweet('I just signed the death2qr petition');
+}
+
 function updateSigner($resp){
- echo 'updateSigner fired';
+ 	echo 'updateSigner fired';
 }
 
 function getSignerCount(){
-	$signerCount = mysql_num_rows(mysql_query("SELECT * FROM signers"));
+	$signerCount = mysql_num_rows(mysql_query("SELECT * FROM signers"));	
 	echo $signerCount;
 }
 

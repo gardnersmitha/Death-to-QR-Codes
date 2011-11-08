@@ -7,7 +7,7 @@
 if($authenticated == true){
 	$username = $resp->screen_name;
 	$authorized = 'authorized';
-	//print_r($resp);
+	print_r($resp);
 }else{
 	$username = null;
 	$authorized = null;

@@ -100,12 +100,15 @@ a:hover { color: #036; }
 }
 
 body{
-	font-family: 'CantarellRegular';	
+	xfont-family: 'CantarellRegular';
+	font-family: Helvetica;
 	line-height:210%;
+	background:#f4f4f4;
+	text-shadow:0px 1px 0px #fff;
 }
 
 .bold{
-	font-family: 'CantarellBold';
+	xfont-family: 'CantarellBold';
 }
 
 #mainframe{
@@ -159,8 +162,46 @@ body{
 
 	#petition ul{
 		list-style:none;
+		margin:0px;
+		padding:0px;
 	}
-
+	
+	.signer{
+		float:left;
+		width:49%;
+		padding:5px 0;
+		margin:5px 1% 5px 0;
+		border-bottom:1px solid #666;
+	}
+	
+		.signer_link{
+			text-decoration:none;
+			display:block;
+			width:100%;
+			overflow:hidden;
+		}
+		
+		.signer_link:hover{
+			text-decoration:underline;		
+			xbackground:#999;
+		}
+		
+			.signer_avatar{
+				float:left;
+			}
+		
+			.signer_info{
+				float:left;
+				margin:0 0 0 5px;
+				line-height:100%;
+				height:48px;
+			}
+		
+				p.signer_name{
+					color:#667;
+					font-weight:bold;
+					font-size:1.2em;
+				}
 
 
 

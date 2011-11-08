@@ -22,6 +22,7 @@ require_once('views.php');
 function createSigner($resp){
 //First, Check that this user doesn't already exist. If they do, send them off to updateSigner()
 $id = $resp->id;
+$description = str_replace("'", "", $resp->description);
 $result = mysql_query("SELECT * FROM signers WHERE id = $id");
 if(!$result){
 	die('Query dont work, bro');
@@ -39,13 +40,13 @@ if((mysql_num_rows($result)) > 0){
 			'$resp->screen_name',
 			'$resp->name',
 			'$resp->profile_image_url',
-			'$resp->description',
+			'$description',
 			'$resp->followers_count',
 			'$resp->url',
 			'$resp->location',
 			''
 		)"
-	);
+	) or print(mysql_error());
 	
 	if($result){
 		echo 'Successful query';

@@ -4,6 +4,7 @@
 mysql_connect("localhost", "root", "root") or die(mysql_error());
 mysql_select_db("death2qr") or die(mysql_error());
 
+/*
 // Retrieve all the data from the "example" table
 $result = mysql_query("SELECT * FROM signers")
 or die(mysql_error());  
@@ -11,8 +12,7 @@ or die(mysql_error());
 // store the record of the "example" table into $row
 $row = mysql_fetch_array( $result );
 // Print out the contents of the entry 
-
-
+*/
 
 
 
@@ -63,17 +63,22 @@ if((mysql_num_rows($result)) > 0){
 
 function sendTweet($resp){
 	require_once('tweet.php');
-	//$signerNumber = getSignerCount();
-	tweet('I just signed the death2qr petition');
+	$signerNumber = getSignerCount(0);
+	$next = $signerNumer + 1;
+	tweet('I\'m signer #'.$signerNumer.'on the #death2qr petition. You should be #'.$next.': htt://www.death2qr.com');
 }
 
 function updateSigner($resp){
  	echo 'updateSigner fired';
 }
 
-function getSignerCount(){
+function getSignerCount($print){
 	$signerCount = mysql_num_rows(mysql_query("SELECT * FROM signers"));	
-	echo $signerCount;
+	if($print == 1){
+		echo $signerCount;
+	}else{
+		return $signerCount;
+	}
 }
 
 function getSigners(){

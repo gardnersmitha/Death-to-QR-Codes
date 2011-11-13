@@ -1,7 +1,26 @@
+/*
+===================
+TABLE OF CONTENTS
+1. HTML5 Boilerplat
+2. Useful classes
+3. Page Style
+	a. header
+	b. marquis
+	c. authenticator
+	d. counter
+	e. petition
+	f. footer
+4. Device and screens
+==================
+*/
 
-/* ==== Scroll down to find where to put your styles :) ==== */
 
-/*  HTML5 ✰ Boilerplate  */
+
+/* 
+--------------------------------------------------------
+1. HTML5 ✰ Boilerplate :: http://html5boilerplate.com/ 
+--------------------------------------------------------
+*/
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -79,11 +98,9 @@ a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
 /*
-    // ========================================== \\
-   ||                                              ||
-   ||               Page Style	                   ||
-   ||                                              ||
-    \\ ========================================== //
+------------------------------------------
+2. Useful Classes
+------------------------------------------
 */
 
 
@@ -98,6 +115,13 @@ a:hover { color: #036; }
 .floatright{
 	float:right;
 }
+
+
+/*
+------------------------------------------
+3. Page Styles
+------------------------------------------
+*/
 
 body{
 	xfont-family: 'CantarellRegular';
@@ -115,16 +139,43 @@ body{
 	width:768px;
 	margin:0 auto;
 	x-webkit-box-shadow:0px 0px 10px #ccc;
-	min-height:1000px;
+	x-min-height:1000px;
 }
  
+/*
+3a. Header
+*/
+
+#mainframe > header{
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-left-raidus:10px;
+	border-bottom-right-raidus:10px;
+	overflow:hidden;
+	background:#e1e1e1;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	border-bottom:1px solid #999;
+	width:98%;
+	padding:2px 1%;
+}
+ 
+/*
+3a. Marquis
+-----------
+*/
+
+
 #marquis{
 	height:192px;
+	text-align:center;
 }
 
 	#marquis h1{
 		height:96px;
-		margin:96px 0 0 0;
+		margin:48px 0 0 0;
 		font-size:48px;
 	}
 	
@@ -134,9 +185,14 @@ body{
 		color:#667;
 	}
 	
-	
+ 
+/*
+3c. Authenticator
+-----------
+*/	
+
 #authenticator{
-	margin:40px 0;
+	margin:24px 0;
 }
 
 	#authenticator.authorized{
@@ -151,13 +207,49 @@ body{
 		margin:0 auto;
 	}
 	
+ 
+/*
+3d. Counter
+-----------
+*/
+
 #counter{
-	height:96px;
-	width:100%:
+	width:100%;
+	text-align:center;
+	overflow:hidden;
 }
+	#counter p{
+		color:#667;
+		font-size:1em;
+		font-weight:bold;
+	}
+	
+	#counter a{
+		color:#222;
+		text-decoration:none;
+	}
+
+	p#count{
+		font-size:5em;
+		font-weight:bold;
+		color:#ff0000;
+		text-shadow:0px 2px 0px #fff;
+		line-height:100%;
+	}
+	
+
+ 
+/*
+3e. Petition
+-----------
+*/
 
 #petition{
 	width:100%;
+	overflow:hidden;
+	clear:both;
+	border-top:3px solid #c2c2c2;
+	padding-top:24px;
 }
 
 	#petition ul{
@@ -171,7 +263,7 @@ body{
 		width:49%;
 		padding:5px 0;
 		margin:5px 1% 5px 0;
-		border-bottom:1px solid #666;
+		border-bottom:1px solid #c9c9c9;
 	}
 	
 		.signer_link{
@@ -202,7 +294,36 @@ body{
 					font-weight:bold;
 					font-size:1.2em;
 				}
+				
+/*
+------------------------------------
+Footer
+------------------------------------
+*/
 
+
+#mainframe > footer{
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-raidus:10px;
+	border-top-right-raidus:10px;
+	overflow:hidden;
+	background:#a1a1a1;
+	color:#f2f2f2;
+	text-shadow:0px -1px 0px #000;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	border-top:1px solid #000;
+	width:98%;
+	padding:2px 1%;
+	clear:both;
+	margin-top:96px;
+	position:abosulute;
+	bottom:0px;
+	
+}
 
 
 
